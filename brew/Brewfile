@@ -1,0 +1,46 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "olets/tap" # zsh-abbr
+
+
+brew "ctop" # https://ctop.sh/
+brew "ncdu" # https://dev.yorhel.nl/ncdu
+brew "neovim"
+brew "tmux"
+brew "bat"
+brew "exa"
+brew "htop"
+brew "grep"
+brew "tldr" # https://tldr.sh/
+brew "asdf"
+brew "awscli"
+brew "git"
+brew "git-delta" # https://github.com/dandavison/delta
+brew "mas" # https://github.com/mas-cli/mas
+brew "kubernetes-cli"
+brew "kustomize"
+brew "libpq"
+brew "jq"
+brew "fzf"
+brew "zoxide" # https://github.com/ajeetdsouza/zoxide
+brew "zplug"  # https://github.com/zplug/zplug
+brew "zsh"
+brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
+brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
+cask "iterm2" # https://iterm2.com/
+cask "ledger-live"
+cask "obsidian"
+cask "spotify"
+cask "visual-studio-code"
+cask "whatsapp"
+cask "firefox"
+cask "viscosity"
+
+# Fonts
+cask "font-jetbrains-mono"
+cask "font-meslo-lg-nerd-font"
+
+# App Store
+mas "Things 3", id: 904280696
+mas "Xcode", id: 497799835

@@ -1,0 +1,61 @@
+# brew
+export PATH=""${HOMEBREW_PREFIX}"/sbin:$PATH"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  aws
+  brew
+  docker
+  docker-compose
+  fzf
+  git
+  git-auto-fetch
+  terraform
+  tmux
+  zoxide
+)
+
+# zsh and oh-my-zsh
+export DISABLE_AUTO_UPDATE=true
+export DISABLE_MAGIC_FUNCTIONS=true
+export HYPHEN_INSENSITIVE=true
+export ZSH=~/.oh-my-zsh
+export ZSH_COMPDUMP=$ZH/cache/.zcompdump-${HOST}-${ZSH_VERSION}
+source $ZSH/oh-my-zsh.sh
+
+# zplug
+export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
+source $ZPLUG_HOME/init.zsh
+zplug "dracula/zsh", as:theme
+if ! zplug check; then
+  zplug install
+fi
+zplug load
+
+# Bat
+export BAT_STYLE="changes,header"
+export BAT_THEME="Dracula" # GitHub
+
+# theme
+ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
+export ZSH_THEME="dracula" # theme
+
+# zsh-autosuggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
+source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting
+source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# asdf
+source "${HOMEBREW_PREFIX}"/opt/asdf/libexec/asdf.sh
+
+# Editor Neovim
+export EDITOR="nvim"
+
+# Alias
+source ~/.zsh_alias
