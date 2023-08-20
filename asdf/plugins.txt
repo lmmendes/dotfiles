@@ -3,3 +3,4 @@ maven
 java
 python
 nodejs
+golang
