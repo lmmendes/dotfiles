@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "olets/tap" # zsh-abbr
 
 
+brew "coreutils" # required for go development
 brew "ctop" # https://ctop.sh/
 brew "ncdu" # https://dev.yorhel.nl/ncdu
 brew "neovim"
@@ -15,6 +16,7 @@ brew "grep"
 brew "tldr" # https://tldr.sh/
 brew "asdf"
 brew "awscli"
+brew "kind"
 brew "git"
 brew "git-delta" # https://github.com/dandavison/delta
 brew "mas" # https://github.com/mas-cli/mas
@@ -44,3 +46,16 @@ cask "font-meslo-lg-nerd-font"
 # App Store
 mas "Things 3", id: 904280696
 mas "Xcode", id: 497799835
+
+# VSCode extensions
+vscode "GitHub.copilot"
+vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "dracula-theme.theme-dracula"
+vscode "foxundermoon.shell-format"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "redhat.vscode-commons"
+vscode "redhat.vscode-yaml"
+vscode "wix.vscode-import-cost"
+vscode "yoavbls.pretty-ts-errors"

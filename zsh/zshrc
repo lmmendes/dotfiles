@@ -54,6 +54,10 @@ source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlightin
 # asdf
 source "${HOMEBREW_PREFIX}"/opt/asdf/libexec/asdf.sh
 
+# set asdf plugins home
+source ~/.asdf/plugins/java/set-java-home.zsh
+source ~/.asdf/plugins/golang/set-env.zsh
+
 # Editor Neovim
 export EDITOR="nvim"
 
