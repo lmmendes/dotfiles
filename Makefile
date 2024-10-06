@@ -1,4 +1,4 @@
-.PHONY: brew zsh asdf iterm ssh git
+.PHONY: brew asdf ssh git zsh
 default: .PHONY
 
 asdf:
@@ -8,10 +8,6 @@ asdf:
 brew:
 	@chmod +x brew/run.sh
 	@./brew/run.sh
-
-iterm:
-	@chmod +x iterm2/run.sh
-	@./iterm2/run.sh
 
 zsh:
 	@chmod +x zsh/run.sh

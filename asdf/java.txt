@@ -1,2 +1,2 @@
 temurin-17.0.8+7 17
-temurin-11.0.20+8 11
+temurin-21.0.4+7.0.LTS 21
