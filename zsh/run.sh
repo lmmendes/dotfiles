@@ -4,18 +4,13 @@ BASEDIR=$(dirname "$(readlink -f "$0")")
 
 # Create symlinks
 ln -sfv "${BASEDIR}/zshrc" "${HOME}/.zshrc"
-ln -sfv "${BASEDIR}/zsh_alias" "${HOME}/.zsh_alias"
+ln -sfv "${BASEDIR}/zsh_aliases" "${HOME}/.zsh_aliases"
+
+# Create symlinks for private files
+ln -sfv "${HOME}/Private/zsh/zsh_env" "${HOME}/.zsh_env"
 
 # Path to Homebrew's zsh
 ZSH_PATH="$(brew --prefix)/bin/zsh"
-
-# Install oh-my-zsh if not present
-if ! test -d "$HOME/.oh-my-zsh"; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
-fi
-
-# Update oh-my-zsh
-"$HOME/.oh-my-zsh/tools/upgrade.sh"
 
 # Add Homebrew's zsh to /etc/shells, so it can be made the default shell
 if ! grep -q "$ZSH_PATH" /etc/shells; then

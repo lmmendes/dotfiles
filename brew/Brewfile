@@ -1,9 +1,11 @@
 # Homebrew extensions
+# Bundler for non-Ruby dependencies from Homebrew, Homebrew Cask,
+# Mac App Store, Whalebrew and Visual Studio Code.
 tap "homebrew/bundle"
 
-# tap "olets/tap" # zsh-abbr
-
-# Terminal Utilities
+# =============================================================================
+# System Utilities
+# =============================================================================
 brew "coreutils" # required for go development
 brew "ctop" # https://ctop.sh/
 brew "ncdu" # https://dev.yorhel.nl/ncdu
@@ -23,7 +25,6 @@ brew "libpq"
 brew "jq"
 brew "fzf"
 brew "zoxide" # https://github.com/ajeetdsouza/zoxide
-cask "ledger-live"
 brew "kind"
 
 # Version Manager
@@ -33,17 +34,25 @@ brew "asdf"
 cask "iterm2" # https://iterm2.com/
 cask "kitty"
 
+# =============================================================================
+# Zsh
+# =============================================================================
 brew "zsh"
-brew "zplug"  # https://github.com/zplug/zplug
+
+# Zsh Plugin Manager
+brew "antigen"  # https://github.com/zsh-users/antigen replaces zplug
 brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
 brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
 
-# Editors
-brew "neovim"
-cask "visual-studio-code"
-cask "zed"
 
-# Music Apps
+# =============================================================================
+# Editors
+# =============================================================================
+cask "visual-studio-code"
+
+# =============================================================================
+# Desktop Apps via Homebrew
+# =============================================================================
 cask "spotify"
 
 # Browser
@@ -58,15 +67,25 @@ cask "whatsapp"
 # VPN Client
 cask "viscosity"
 
+# Wallet desktop application to maintain multiple cryptocurrencies
+cask "ledger-live"
+
+
+# =============================================================================
 # Fonts
+# =============================================================================
 cask "font-jetbrains-mono"
 cask "font-meslo-lg-nerd-font"
 
-# App Store
+# =============================================================================
+# Desktop Apps via App Store
+# =============================================================================
 mas "Things 3", id: 904280696
 mas "Xcode", id: 497799835
 
-# VSCode extensions
+# =============================================================================
+# VSCode Extensions
+# =============================================================================
 vscode "GitHub.copilot"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "dracula-theme.theme-dracula"
@@ -80,6 +99,14 @@ vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "ms-vscode.makefile-tools" # Makefile Tools
 vscode "wix.vscode-import-cost"
+
+# =============================================================================
+# Eletrocnic Applications
+# =============================================================================
+cask "thonny" # Python IDE for beginners
+cask "kicad" # Electronic Design Automation (EDA) software
+
+
 
 # ==============================================================================
 # Labs
@@ -95,3 +122,13 @@ cask "headlamp"
 # https://sw.kovidgoyal.net/kitty/
 # A fast, featureful, GPU based terminal emulator replacement for iterm
 cask "kitty"
+
+brew "lazydocker"
+
+brew "lazygit"
+
+brew "zellij"
+
+cask "zed"
+
+brew "neovim"

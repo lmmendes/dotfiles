@@ -1,68 +1,71 @@
-# brew
+# =======================================================
+# homebrew
+# =======================================================
 export PATH=""${HOMEBREW_PREFIX}"/sbin:$PATH"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  aws
-  brew
-  docker
-  docker-compose
-  fzf
-  git
-  git-auto-fetch
-  terraform
-  tmux
-  zoxide
-)
-
-# zsh and oh-my-zsh
-export DISABLE_AUTO_UPDATE=true
-export DISABLE_MAGIC_FUNCTIONS=true
-export HYPHEN_INSENSITIVE=true
-export ZSH=~/.oh-my-zsh
-export ZSH_COMPDUMP=$ZH/cache/.zcompdump-${HOST}-${ZSH_VERSION}
-source $ZSH/oh-my-zsh.sh
-
-# zplug
-export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
-source $ZPLUG_HOME/init.zsh
-zplug "dracula/zsh", as:theme
-if ! zplug check; then
-  zplug install
+# Support Intel/ARM Homebrew
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
 fi
-zplug load
 
-# Bat
-export BAT_STYLE="changes,header"
-export BAT_THEME="Dracula" # GitHub
+# =======================================================
+# zsh
+# =======================================================
+export ZSH_COMPDUMP=$ZH/cache/.zcompdump-${HOST}-${ZSH_VERSION}
 
-# theme
-ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
-export ZSH_THEME="dracula" # theme
+# antigen
+source "${HOMEBREW_PREFIX}/share/antigen/antigen.zsh"
+
+# install antigen plugins
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+
+# load the theme
+antigen apply
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
-source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# zsh-syntax-highlighting
-source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# =======================================================
+# zoxide
+# =======================================================
+# zoxide
+# Setup zoxide on your shell, the "cd replacement"
+eval "$(zoxide init zsh)"
 
+# =======================================================
+# bat
+# =======================================================
+
+export BAT_STYLE="changes,header"
+export BAT_THEME="Dracula" # GitHub
+
+# =======================================================
 # asdf
+# =======================================================
+
+# load asdf
 source "${HOMEBREW_PREFIX}"/opt/asdf/libexec/asdf.sh
 
 # set asdf plugins home
 source ~/.asdf/plugins/java/set-java-home.zsh
 source ~/.asdf/plugins/golang/set-env.zsh
 
+# =======================================================
+# neovim
+# =======================================================
+
 # Editor Neovim
 export EDITOR="nvim"
 
 # Alias
-source ~/.zsh_alias
+source ~/.zsh_aliases
 source ~/.zsh_env
+
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+exec $ZSH_PATH
