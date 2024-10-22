@@ -44,7 +44,6 @@ brew "antigen"  # https://github.com/zsh-users/antigen replaces zplug
 brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
 brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
 
-
 # =============================================================================
 # Editors
 # =============================================================================
@@ -105,8 +104,6 @@ vscode "wix.vscode-import-cost"
 # =============================================================================
 cask "thonny" # Python IDE for beginners
 cask "kicad" # Electronic Design Automation (EDA) software
-
-
 
 # ==============================================================================
 # Labs
