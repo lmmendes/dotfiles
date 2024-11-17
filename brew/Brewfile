@@ -69,6 +69,9 @@ cask "viscosity"
 # Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-live"
 
+# Bruno a replacement for Postman and Insomnia
+brew "bruno"
+
 
 # =============================================================================
 # Fonts

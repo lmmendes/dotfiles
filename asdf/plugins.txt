@@ -8,3 +8,4 @@ ruby
 pulumi
 terraform
 dart
+flutter
