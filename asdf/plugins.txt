@@ -9,3 +9,4 @@ pulumi
 terraform
 dart
 flutter
+uv

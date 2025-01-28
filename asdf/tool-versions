@@ -10,3 +10,5 @@ pulumi 3.133.0
 terraform 1.9
 dart 3.5
 flutter 3.24.5-stable
+poetry 1.8.5
+uv 0.5.18

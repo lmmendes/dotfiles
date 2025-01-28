@@ -121,8 +121,6 @@ cask "headlamp"
 
 # https://sw.kovidgoyal.net/kitty/
 # A fast, featureful, GPU based terminal emulator replacement for iterm
-cask "kitty"
-
 brew "lazydocker"
 
 brew "lazygit"
@@ -130,5 +128,7 @@ brew "lazygit"
 brew "zellij"
 
 cask "zed"
+
+cask "ghostty"
 
 brew "neovim"
