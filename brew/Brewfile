@@ -30,17 +30,13 @@ brew "kind"
 # Version Manager
 brew "asdf"
 
-# Terminal
-cask "iterm2" # https://iterm2.com/
-cask "kitty"
-
 # =============================================================================
 # Zsh
 # =============================================================================
 brew "zsh"
 
 # Zsh Plugin Manager
-brew "antigen"  # https://github.com/zsh-users/antigen replaces zplug
+brew "antigen"                 # https://github.com/zsh-users/antigen replaces zplug
 brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
 brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
 
@@ -70,7 +66,10 @@ cask "viscosity"
 cask "ledger-live"
 
 # Bruno a replacement for Postman and Insomnia
-brew "bruno"
+# In the documentation "Bruno" is listed as "bruno" is listed as Formula
+# and not as Cask
+# https://github.com/usebruno/bruno/issues/2948#issuecomment-2315564106
+cask "bruno"
 
 
 # =============================================================================
@@ -127,8 +126,10 @@ brew "lazygit"
 
 brew "zellij"
 
+# Editor
 cask "zed"
 
+# Command line
 cask "ghostty"
 
 brew "neovim"
