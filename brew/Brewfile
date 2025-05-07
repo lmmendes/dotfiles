@@ -40,6 +40,8 @@ brew "antigen"                 # https://github.com/zsh-users/antigen replaces z
 brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
 brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
 
+brew "powerlevel10k" # https://github.com/romkatv/powerlevel10k
+
 # =============================================================================
 # Editors
 # =============================================================================
@@ -133,3 +135,9 @@ cask "zed"
 cask "ghostty"
 
 brew "neovim"
+
+cask "arduino-ide"
+
+# Jujutsu—a version control system
+# https://github.com/jj-vcs/jj
+brew "jj"
