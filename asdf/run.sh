@@ -13,10 +13,13 @@ function install_listed_sdks() {
             alias=$(echo "$line" | awk '{print $2}')
             echo "Installing ${name} ${version}..."
             asdf install "$name" "$version"
-            if [[ -n "$alias" && "${version}" != $(asdf alias "$name" "$alias") ]]; then
-                echo "Setting alias ${alias} for ${name} ${version}..."
-                asdf alias "$name" "$alias" "$version"
-            fi
+            # With upgrade to asdf 0.16 alias plugin broke, I hope that the ends being added to the core
+            # meanwhile let's comment out this section of the code.
+            # https://github.com/andrewthauer/asdf-alias/issues/13
+            # if [[ -n "$alias" && "${version}" != $(asdf alias "$name" "$alias") ]]; then
+            #    echo "Setting alias ${alias} for ${name} ${version}..."
+            #    asdf alias "$name" "$alias" "$version"
+            # fi
         fi
     done < "${BASEDIR}/${name}.txt"
 }
@@ -46,15 +49,15 @@ while IFS= read -r plugin || [[ -n "$plugin" ]]; do
         echo "Installing plugin '${plugin}'..."
         # Don't error out when plugins are already installed.
         # See https://github.com/asdf-vm/asdf/issues/841.
-        sh -c "asdf plugin-add ${plugin}" || true
+        sh -c "asdf plugin add ${plugin}" || true
     fi
 done < "${BASEDIR}/plugins.txt"
 
 # Remove plugins not in plugins.txt
 while IFS= read -r plugin || [[ -n "$plugin" ]]; do
     echo "Uninstalling plugin '${plugin}'..."
-    asdf plugin-remove "${plugin}"
-done < <(comm -23 <(asdf plugin-list | sort) <(cat "${BASEDIR}/plugins.txt" | sort))
+    asdf plugin remove "${plugin}"
+done < <(comm -23 <(asdf plugin list | sort) <(cat "${BASEDIR}/plugins.txt" | sort))
 
 # # Install SDKs
 for sdk in $(basename -s .txt "${BASEDIR}"/*.txt | grep -v plugins); do

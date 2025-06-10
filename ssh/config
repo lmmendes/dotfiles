@@ -1,8 +1,9 @@
-Include config_home
+Include ~/.config/ssh/sshconfig-me
+Include ~/.config/ssh/sshconfig-mbag
+Include ~/.config/ssh/sshconfig-passworks
 
 Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
   PubkeyAcceptedKeyTypes=+ssh-rsa
   HostKeyAlgorithms=+ssh-rsa

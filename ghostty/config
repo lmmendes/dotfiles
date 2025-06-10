@@ -1,0 +1,24 @@
+#
+# Ghostty configuration
+#
+# For an overview of options, see: https://ghostty.org/docs/config/reference
+#
+
+font-family = MesloLGS Nerd Font Mono
+font-size = 14
+
+# Ghostty doesn't support unlimited scrollback not sure if this would be desired
+# but right now 10k lines fits the goal
+# See https://ghostty.org/docs/config/reference#scrollback-limit
+scrollback-limit = 10_000
+
+# See https://ghostty.org/docs/config/reference#shell-integration
+shell-integration = zsh
+
+# See: https://ghostty.org/docs/config/keybind/reference#toggle_quick_terminal
+keybind = global:cmd+shift+grave_accent=toggle_quick_terminal
+quick-terminal-position = center
+
+# Enable copy-on-select
+# See: https://ghostty.org/docs/config/reference#copy-on-select
+copy-on-select = clipboard

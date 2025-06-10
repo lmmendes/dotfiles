@@ -7,7 +7,7 @@ ln -sfv "${BASEDIR}/zshrc" "${HOME}/.zshrc"
 ln -sfv "${BASEDIR}/zsh_aliases" "${HOME}/.zsh_aliases"
 
 # Create symlinks for private files
-ln -sfv "${HOME}/Private/zsh/zsh_env" "${HOME}/.zsh_env"
+ln -sfv "${HOME}/.config/zsh/zsh_env" "${HOME}/.zsh_env"
 
 # Path to Homebrew's zsh
 ZSH_PATH="$(brew --prefix)/bin/zsh"

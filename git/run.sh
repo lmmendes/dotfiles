@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 set -e
 BASE_DIR=$(dirname "$(readlink -f "$0")")
+GIT_CONFIG_DIR="${HOME}/.config/git"
 
-git config --global gpg.format ssh
-git config --global user.signingkey $HOME/.ssh/id_ed25519.pub
-git config --global commit.gpgsign true
-git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
-# git config --global core.excludesfile $HOME/.gitignore
+mkdir -p $GIT_CONFIG_DIR
+
+# Create symlinks
+ln -sfv "${BASE_DIR}/gitconfig" "${HOME}/.gitconfig"
+
+ln -sfv "${BASE_DIR}/alias" "${GIT_CONFIG_DIR}/alias"
+
+ln -sfv "${BASE_DIR}/gitignore" "${GIT_CONFIG_DIR}/gitignore"

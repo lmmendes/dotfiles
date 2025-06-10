@@ -1,0 +1,35 @@
+[core]
+    # Use the gitignore as the Global git ignore solution
+    excludesfile = ~/.config/git/gitignore
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = main
+
+[pull]
+    ff = only
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[rebase]
+    autoStash = true
+
+[help]
+    # https://adamj.eu/tech/2022/10/26/git-how-to-enable-autocorrect/
+    autocorrect = prompt
+
+[include]
+    path = ~/.config/git/alias
+
+[include]
+    path = ~/.config/git/gitconfig-me
+
+[includeIf "gitdir:~/code/mbag/"]
+    path = ~/.config/git/gitconfig-mbag

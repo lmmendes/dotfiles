@@ -1,12 +1,8 @@
-alias
 maven
 java
 python
 nodejs
 golang
 ruby
-pulumi
 terraform
-dart
-flutter
 uv

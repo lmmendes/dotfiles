@@ -1,4 +1,4 @@
-.PHONY: brew asdf ssh git zsh
+.PHONY: brew asdf ssh git zsh ghostty
 default: .PHONY
 
 asdf:
@@ -20,3 +20,7 @@ ssh:
 git:
 	@chmod +x git/run.sh
 	@./git/run.sh
+
+ghostty:
+	@chmod +x ghostty/run.sh
+	@./ghostty/run.sh
