@@ -79,7 +79,7 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # =======================================================
 # Alias
 # =======================================================
-source ~/.zsh_aliases
+source ~/.zsh_alias
 source ~/.zsh_env
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

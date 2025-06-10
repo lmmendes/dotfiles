@@ -61,5 +61,5 @@ This file is then referenced in `.gitconfig`.
 To set up everything automatically, run:
 
 ```bash
-make git
+./run.sh # make git
 ```

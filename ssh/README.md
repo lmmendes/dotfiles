@@ -15,3 +15,9 @@ Host github.com
 ```
 
 This structure helps me keep the SSH config modular and easier to manage across personal, work, and project-specific setups.
+
+## Usage
+
+```bash
+./run.sh # make ssh
+```

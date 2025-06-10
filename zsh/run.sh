@@ -4,7 +4,7 @@ BASEDIR=$(dirname "$(readlink -f "$0")")
 
 # Create symlinks
 ln -sfv "${BASEDIR}/zshrc" "${HOME}/.zshrc"
-ln -sfv "${BASEDIR}/zsh_aliases" "${HOME}/.zsh_aliases"
+ln -sfv "${BASEDIR}/zsh_alias" "${HOME}/.zsh_alias"
 
 # Create symlinks for private files
 ln -sfv "${HOME}/.config/zsh/zsh_env" "${HOME}/.zsh_env"
