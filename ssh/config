@@ -1,0 +1,9 @@
+Include ~/.config/ssh/sshconfig-me
+Include ~/.config/ssh/sshconfig-mbag
+Include ~/.config/ssh/sshconfig-passworks
+
+Host *
+  UseKeychain yes
+  AddKeysToAgent yes
+  PubkeyAcceptedKeyTypes=+ssh-rsa
+  HostKeyAlgorithms=+ssh-rsa

@@ -1,0 +1,15 @@
+alias cd='z'
+alias c="cd ~/code"
+alias g="git"
+alias json="pbpaste | jq '.'"
+alias k="kubectl"
+alias borg="cd ${HOME}/dotfiles && make"
+alias ls="eza"
+alias vi="nvim"
+alias vim="nvim"
+alias cat="bat"
+
+# Git
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
