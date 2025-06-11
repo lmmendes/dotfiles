@@ -38,9 +38,9 @@ This repository contains my personal macOS dotfiles. I'm sharing them publicly t
 
 3. You can run individual parts selectively or chain them:
 
-```bash
-make brew asdf git
-```
+    ```bash
+    make brew asdf git
+    ```
 
 ## Known Issues
 
