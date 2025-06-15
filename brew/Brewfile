@@ -27,6 +27,7 @@ brew "yq"
 brew "fzf"
 brew "zoxide" # https://github.com/ajeetdsouza/zoxide
 brew "kind"
+brew "swaks" # SMTP Testing tool - https://www.jetmore.org/john/code/swaks/
 
 # =============================================================================
 # Fonts
