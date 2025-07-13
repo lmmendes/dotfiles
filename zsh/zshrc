@@ -44,20 +44,13 @@ export BAT_STYLE="changes,header"
 export BAT_THEME="Dracula" # GitHub
 
 # =======================================================
-# asdf
+# mise - https://mise.jdx.dev/
 # =======================================================
+eval "$(mise activate zsh)"
 
-# load asdf
-source "${HOMEBREW_PREFIX}"/opt/asdf/libexec/asdf.sh
+# Source ~/.config/mise/mise.zsh if it exists
+[[ -f "$HOME/.config/mise/mise.zsh" ]] && source "$HOME/.config/mise/mise.zsh"
 
-# load shims and completions
-export PATH="$HOME/.asdf/shims:$PATH"
-
-
-
-# set asdf plugins home
-source ~/.asdf/plugins/java/set-java-home.zsh
-source ~/.asdf/plugins/golang/set-env.zsh
 
 # =======================================================
 # neovim
@@ -89,3 +82,6 @@ exec $ZSH_PATH
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/mendelui/.lmstudio/bin"
+
+# Add IdPCli
+export PATH="$PATH:/usr/local/opt/Idp"

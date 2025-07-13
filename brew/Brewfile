@@ -1,131 +1,138 @@
 # Homebrew extensions
 # Bundler for non-Ruby dependencies from Homebrew, Homebrew Cask,
 # Mac App Store, Whalebrew and Visual Studio Code.
-tap "homebrew/bundle"
+tap 'homebrew/bundle'
+
+# =============================================================================
+# Compile dependencies
+# =============================================================================
+brew 'libyaml'
+brew 'pkg-config'
 
 # =============================================================================
 # System Utilities
 # =============================================================================
-brew "coreutils" # required for go development
-brew "ctop" # https://ctop.sh/
-brew "ncdu" # https://dev.yorhel.nl/ncdu
-brew "tmux"
-brew "bat"
-brew "eza" # https://github.com/eza-community/eza - A modern replacement for ls
-brew "htop"
-brew "grep"
-brew "tldr" # https://tldr.sh/
-brew "awscli"
-brew "git"
-brew "git-delta" # https://github.com/dandavison/delta
-brew "mas" # https://github.com/mas-cli/mas
-brew "kubernetes-cli"
-brew "kustomize"
-brew "libpq"
-brew "jq"
-brew "yq"
-brew "fzf"
-brew "zoxide" # https://github.com/ajeetdsouza/zoxide
-brew "kind"
-brew "swaks" # SMTP Testing tool - https://www.jetmore.org/john/code/swaks/
+brew 'coreutils' # required for go development
+brew 'ctop' # https://ctop.sh/
+brew 'ncdu' # https://dev.yorhel.nl/ncdu
+brew 'tmux'
+brew 'bat'
+brew 'eza' # https://github.com/eza-community/eza - A modern replacement for ls
+brew 'htop'
+brew 'grep'
+brew 'tldr' # https://tldr.sh/
+brew 'awscli'
+brew 'git'
+brew 'git-delta' # https://github.com/dandavison/delta
+brew 'mas' # https://github.com/mas-cli/mas
+brew 'kubernetes-cli'
+brew 'kustomize'
+brew 'libpq'
+brew 'jq'
+brew 'yq'
+brew 'fzf'
+brew 'zoxide' # https://github.com/ajeetdsouza/zoxide
+brew 'kind'
+brew 'swaks' # SMTP Testing tool - https://www.jetmore.org/john/code/swaks/
 
 # =============================================================================
 # Fonts
 # =============================================================================
-cask "font-jetbrains-mono"
-cask "font-meslo-lg-nerd-font"
+cask 'font-jetbrains-mono'
+cask 'font-meslo-lg-nerd-font'
 
 # =============================================================================
 # Version Manager
 # =============================================================================
-brew "asdf"
+brew 'asdf'
+brew 'mise'
 
 # =============================================================================
 # Zsh
 # =============================================================================
-brew "zsh"
+brew 'zsh'
 
 # Zsh Plugin Manager
-brew "antigen"                 # https://github.com/zsh-users/antigen replaces zplug
-brew "zsh-autosuggestions"     # https://github.com/zsh-users/zsh-autosuggestions
-brew "zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
+brew 'antigen'                 # https://github.com/zsh-users/antigen replaces zplug
+brew 'zsh-autosuggestions'     # https://github.com/zsh-users/zsh-autosuggestions
+brew 'zsh-syntax-highlighting' # https://github.com/zsh-users/zsh-syntax-highlighting
 
-brew "powerlevel10k" # https://github.com/romkatv/powerlevel10k
+brew 'powerlevel10k' # https://github.com/romkatv/powerlevel10k
 
 # =============================================================================
 # Editors
 # =============================================================================
-cask "visual-studio-code"
-cask "zed"
-brew "neovim"
+cask 'visual-studio-code'
+cask 'zed'
+brew 'neovim'
 
 # =============================================================================
 # Desktop Apps via Homebrew
 # =============================================================================
-cask "spotify"
+cask 'spotify'
 
 # Browser
-cask "firefox"
+cask 'firefox'
 
 # Knowledge Management
-cask "obsidian"
+cask 'obsidian'
 
 # Communication
-cask "whatsapp"
+cask 'whatsapp'
 
 # VPN Client
-cask "viscosity"
+cask 'viscosity'
 
 # Wallet desktop application to maintain multiple cryptocurrencies
-cask "ledger-live"
+cask 'ledger-live'
 
 # https://headlamp.dev/
 # It's a replacement for OpenLens - https://github.com/MuhammedKalkan/OpenLens
-cask "headlamp"
+cask 'headlamp'
 
-cask "boop"
+cask 'boop'
 
 # Manage e-Book
-cask "calibre"
+cask 'calibre'
 
-cask "jetbrains-toolbox"
+cask 'jetbrains-toolbox'
 
 # =============================================================================
 # Apple Desktop Apps
 # =============================================================================
-mas "Things 3", id: 904280696
-mas "Xcode", id: 497799835
-mas "Magnet", id: 441258766
+mas 'Things 3', id: 904280696
+mas 'Xcode', id: 497799835
+mas 'Magnet', id: 441258766
 
 # =============================================================================
 # VSCode Extensions
 # =============================================================================
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
-vscode "VisualStudioExptTeam.vscodeintellicode"
-vscode "dracula-theme.theme-dracula"
-vscode "foxundermoon.shell-format"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "redhat.vscode-commons"
-vscode "redhat.vscode-yaml"
-vscode "wix.vscode-import-cost"
-vscode "yoavbls.pretty-ts-errors"
-vscode "ms-vscode.makefile-tools" # Makefile Tools
-vscode "wix.vscode-import-cost"
+vscode 'GitHub.copilot'
+vscode 'GitHub.copilot-chat'
+vscode 'VisualStudioExptTeam.vscodeintellicode'
+vscode 'dracula-theme.theme-dracula'
+vscode 'foxundermoon.shell-format'
+vscode 'ms-python.isort'
+vscode 'ms-python.python'
+vscode 'ms-python.vscode-pylance'
+vscode 'redhat.vscode-commons'
+vscode 'redhat.vscode-yaml'
+vscode 'wix.vscode-import-cost'
+vscode 'yoavbls.pretty-ts-errors'
+vscode 'ms-vscode.makefile-tools' # Makefile Tools
+vscode 'wix.vscode-import-cost'
 
 # =============================================================================
 # Eletrocnic Applications
 # =============================================================================
-# cask "thonny" # Python IDE for beginners
-# cask "kicad" # Electronic Design Automation (EDA) software
+# cask 'thonny' # Python IDE for beginners
+# cask 'kicad' # Electronic Design Automation (EDA) software
 
 # =============================================================================
 # Terminal Emulator
 # =============================================================================
 # https://ghostty.org/
-cask "ghostty"
+cask 'ghostty'
 
 # ==============================================================================
 # Labs
@@ -135,26 +142,26 @@ cask "ghostty"
 
 # https://sw.kovidgoyal.net/kitty/
 # A fast, featureful, GPU based terminal emulator replacement for iterm
-brew "lazydocker"
+brew 'lazydocker'
 
-brew "lazygit"
+brew 'lazygit'
 
-brew "zellij"
+brew 'zellij'
 
-# cask "arduino-ide"
+# cask 'arduino-ide'
 
 # Jujutsu—a version control system
 # https://github.com/jj-vcs/jj
-brew "jj"
+brew 'jj'
 
 # zotero helps with collect, organize, annotate, cite, and share research
 # recommendation from gzurowski
 # https://www.zotero.org/
-cask "zotero"
+cask 'zotero'
 
 # Bruno a replacement for Postman and Insomnia
 # I'm not liking it, but need to keep things using OSS without requireing me to login
-# In the documentation "Bruno" is listed as "bruno" is listed as Formula
+# In the documentation 'Bruno' is listed as 'bruno' is listed as Formula
 # and not as Cask
 # https://github.com/usebruno/bruno/issues/2948#issuecomment-2315564106
-cask "bruno"
+cask 'bruno'
