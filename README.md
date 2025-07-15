@@ -12,7 +12,7 @@ This repository contains my personal macOS dotfiles. I'm sharing them publicly t
 
 | Target    | Description                          | How to Run     |
 | --------- | ------------------------------------ | -------------- |
-| `asdf`    | Sets up `mise` version manager       | `make mise`    |
+| `mise`    | Sets up `mise` version manager       | `make mise`    |
 | `brew`    | Installs packages using Homebrew     | `make brew`    |
 | `zsh`     | Configures your Zsh shell            | `make zsh`     |
 | `ssh`     | Sets up SSH-related configuration    | `make ssh`     |
