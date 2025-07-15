@@ -12,7 +12,7 @@ This repository contains my personal macOS dotfiles. I'm sharing them publicly t
 
 | Target    | Description                          | How to Run     |
 | --------- | ------------------------------------ | -------------- |
-| `asdf`    | Sets up `asdf` version manager       | `make asdf`    |
+| `asdf`    | Sets up `mise` version manager       | `make mise`    |
 | `brew`    | Installs packages using Homebrew     | `make brew`    |
 | `zsh`     | Configures your Zsh shell            | `make zsh`     |
 | `ssh`     | Sets up SSH-related configuration    | `make ssh`     |
@@ -26,7 +26,7 @@ This repository contains my personal macOS dotfiles. I'm sharing them publicly t
 1. Clone your dotfiles repository:
 
     ```bash
-    git clone https://github.com/your-username/dotfiles.git
+    git clone https://github.com/lmmendes/dotfiles
     cd dotfiles
     ```
 2. Run the setup targets as needed. For example:
@@ -39,11 +39,5 @@ This repository contains my personal macOS dotfiles. I'm sharing them publicly t
 3. You can run individual parts selectively or chain them:
 
     ```bash
-    make brew asdf git
+    make brew mise git
     ```
-
-## Known Issues
-
-- **[broken]** `asdf-alias` plugin no longer works
-
-    I was using [asdf-alias](https://github.com/andrewthauer/asdf-alias) to manage multiple runtime versions. However, upgrading to asdf v0.16 broke compatibility. More details are available in [this GitHub issue](https://github.com/andrewthauer/asdf-alias/issues/13).

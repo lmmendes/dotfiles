@@ -1,5 +1,11 @@
 # Changelog
 
+## 15 Jul 2025
+
+- Clean-up leftovers from the deprecation of [asdf](https://asdf-vm.com/)
+- Added `pfind` alias; Shows detailed info about the process listening on a given TCP port.
+- Add `pkill` alias; Kills the process listening on a given TCP port
+
 
 ## 13 Jul 2025
 

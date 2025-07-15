@@ -13,3 +13,41 @@ alias cat="bat"
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+# Kills the process listening on a given TCP port
+pkill() {
+  local port="$1"
+  if [ -z "$port" ]; then
+    echo "Kills the process listening on a given TCP port"
+    echo "Usage: pkillport <port>"
+    return 1
+  fi
+  local pids
+  pids=$(lsof -ti :"$port")
+  if [ -z "$pids" ]; then
+    echo "No process found on port $port"
+  else
+    echo "Killing process(es) on port $port: $pids"
+    kill -9 $pids
+  fi
+}
+
+# Shows detailed info about the process listening on a given TCP port.
+pfind() {
+  local port="$1"
+  if [ -z "$port" ]; then
+    echo "Shows detailed info about the process listening on a given TCP port"
+    echo "Usage: pfind <port>"
+    return 1
+  fi
+
+  local pids
+  pids=$(lsof -tiTCP:"$port" -sTCP:LISTEN)
+
+  if [ -z "$pids" ]; then
+    echo "No process found listening on port $port"
+    return 1
+  fi
+
+  ps -p $pids -o pid=,user=,comm=,args=
+}
