@@ -27,6 +27,17 @@ brew "yq"
 brew "fzf"
 brew "zoxide" # https://github.com/ajeetdsouza/zoxide
 brew "kind"
+brew "kubelogin" # https://github.com/int128/kubelogin
+brew "tree"
+brew "k9s"
+brew "gh"
+brew "rg"
+
+# =============================================================================
+# Dependencies
+# =============================================================================
+brew "libyaml"
+brew "vips"
 
 # =============================================================================
 # Fonts
@@ -37,7 +48,7 @@ cask "font-meslo-lg-nerd-font"
 # =============================================================================
 # Version Manager
 # =============================================================================
-brew "asdf"
+brew "mise"
 
 # =============================================================================
 # Zsh
@@ -157,3 +168,5 @@ cask "zotero"
 # and not as Cask
 # https://github.com/usebruno/bruno/issues/2948#issuecomment-2315564106
 cask "bruno"
+
+cask "block-goose"
