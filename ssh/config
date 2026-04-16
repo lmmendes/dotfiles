@@ -1,5 +1,6 @@
 Include ~/.config/ssh/sshconfig-me
 Include ~/.config/ssh/sshconfig-mbag
+Include ~/.config/ssh/sshconfig-mbag-ghe
 Include ~/.config/ssh/sshconfig-passworks
 
 Host *
