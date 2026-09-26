@@ -81,16 +81,16 @@ cask "spotify"
 cask "firefox"
 
 # Knowledge Management
-cask "obsidian"
+# cask "obsidian"
 
 # Communication
 cask "whatsapp"
 
 # VPN Client
-cask "viscosity"
+# cask "viscosity"
 
 # Wallet desktop application to maintain multiple cryptocurrencies
-cask "ledger-live"
+# cask "ledger-live"
 
 # https://headlamp.dev/
 # It's a replacement for OpenLens - https://github.com/MuhammedKalkan/OpenLens
@@ -99,7 +99,7 @@ cask "headlamp"
 cask "boop"
 
 # Manage e-Book
-cask "calibre"
+# cask "calibre"
 
 cask "jetbrains-toolbox"
 
@@ -107,7 +107,7 @@ cask "jetbrains-toolbox"
 # Apple Desktop Apps
 # =============================================================================
 mas "Things 3", id: 904280696
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 mas "Magnet", id: 441258766
 
 # =============================================================================
@@ -163,7 +163,7 @@ brew "jj"
 # zotero helps with collect, organize, annotate, cite, and share research
 # recommendation from gzurowski
 # https://www.zotero.org/
-cask "zotero"
+# cask "zotero"
 
 # Bruno a replacement for Postman and Insomnia
 # I'm not liking it, but need to keep things using OSS without requireing me to login
@@ -172,10 +172,10 @@ cask "zotero"
 # https://github.com/usebruno/bruno/issues/2948#issuecomment-2315564106
 cask "bruno"
 
-cask "block-goose"
+# cask "block-goose"
 
 # Run ai models
-brew "ollama"
+# brew "ollama"
 
 # macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do
 # https://github.com/darrylmorley/whatcable
