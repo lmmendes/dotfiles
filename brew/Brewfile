@@ -32,6 +32,9 @@ brew "tree"
 brew "k9s"
 brew "gh"
 brew "rg"
+brew "uv" # Pyhon Package Manager
+brew "sops" # https://getsops.io/
+
 
 # =============================================================================
 # Dependencies
@@ -170,3 +173,13 @@ cask "zotero"
 cask "bruno"
 
 cask "block-goose"
+
+# Run ai models
+brew "ollama"
+
+# macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do
+# https://github.com/darrylmorley/whatcable
+tap "darrylmorley/whatcable"
+cask "whatcable"
+
+cask "tolaria"
